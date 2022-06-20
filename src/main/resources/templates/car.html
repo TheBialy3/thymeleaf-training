@@ -6,13 +6,19 @@
 </head>
 <body>
 <h1>Kurs thymeleaf</h1>
-<p>Hello World!</p>
-<p th:text="${name}"></p>
-
 <tr th:each="car: ${cars}">
     <td th:text="${car.getMark()}"></td>
     <td th:text="${car.getModel()}"></td><br>
     <p>====================</p>
 </tr>
+
+<form th:action="@{/add-car}" th:object="${newCar}" method="post">
+    <p>Mark: <input type="text" th:field="*{mark}"></p>
+    <p>Model: <input type="text" th:field="*{model}"></p>
+    <p><input type="submit" value="add new car"></p>
+</form>
+
+
+
 </body>
 </html>
