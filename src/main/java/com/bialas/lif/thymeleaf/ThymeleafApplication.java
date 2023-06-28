@@ -12,10 +12,10 @@ public class ThymeleafApplication {
     }
 
 
-//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        if (!registry.hasMappingForPattern("/assets/**")) {
-//            registry.addResourceHandler("/assets/**").addResourceLocations("classpath:/assets/css/");
-//        }
-//    }
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        if (!registry.hasMappingForPattern("/assets/**")) {
+            registry.addResourceHandler("/assets/**").addResourceLocations("classpath:/assets/css/");
+        }
+    }
 
 }
