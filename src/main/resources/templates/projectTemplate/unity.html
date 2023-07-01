@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Karol Białas"/>
+    <meta name="description" content="My portfolio to show what i can do.">
+    <link rel="icon" type="image/x-icon" href="/js/cssandjs/logo.ico" th:href="@{/js/cssandjs/logo.ico}">
+    <title>Karol Białas portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/js/cssandjs/logo.ico" th:href="@{/js/cssandjs/logo.ico}">
+    <link rel="stylesheet" media="all" href="../../static/js/cssandjs/main.css" th:href="@{/js/cssandjs/main.css}">
+</head>
+
+<body>
+<div id="pagetop" class="header">
+    <h1 class="h1-title">
+        Karol Białas</h1>
+    <hr>
+</div>
+<div>
+
+
+    <div class="content">
+        <img src="../../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
+    <p>Karol Białas</p>
+        
+    <p th:text="${name}"></p>
+    <tr th:each="car: ${cars}">
+        <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+        <br>
+    </tr></div>
+</div>
+<div class="footer">
+    <hr>
+    <p class="footer-text">&lt;&lt;&lt;&nbsp;&copy; Karol Białas &gt;&gt;&gt;</p>
+</div>
+</body>
+</html>

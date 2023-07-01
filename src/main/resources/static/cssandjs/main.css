@@ -1,0 +1,96 @@
+:root {
+    --text-header-color: whitesmoke;
+    --text-body-color-1: #6d8203;
+    --text-body-color-2: #b2b356;
+    --text-body-color-3: #62acb5;
+    --text-body-color-4: #3b4483;
+    --background-section-1: #333;
+    --background-section-2: #5d5d5d;
+    --background-section-3: #5f6062;
+    --background-section-4: #e1e1e1;
+}
+
+html {
+    font-size: 22px;
+}
+
+body {
+    background: var(--background-section-1);
+    color: var(--text-header-color);
+    margin: 0;
+}
+
+.h1-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.left {
+    left: 0;
+    float: left !important;
+}
+
+.right {
+    right: 0;
+    float: right !important;
+}
+
+.section-1 {
+    background: var(--background-section-2);
+    width: 99%;
+    padding: 20px
+}
+
+
+#page-top {
+    position: sticky;
+    z-index: 4;
+    padding-left: 1px;
+    padding-right: 16px;
+    font-family: 'Source Sans Pro Topnav', sans-serif;
+}
+.line-1{
+    height: 2px;
+    width: 100%;
+    background: var(--text-header-color);
+    margin-top: 0px;
+}
+
+.buttons-header {
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0.5em 0.5em;
+    border: none;
+    border-radius: 5px;
+    background: var(--background-section-2);
+    color: var(--text-body-color-4);
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block;
+}
+.buttons-header:hover {
+    background-color: var(--background-section-4);
+}
+
+.header {
+    position: relative;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: var( --background-section-1);
+}
+
+.footer-text {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
