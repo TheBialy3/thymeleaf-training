@@ -6,23 +6,29 @@
     <meta name="description" content="My portfolio to show what i can do.">
     <title>Karol Białas portfolio</title>
     <link rel="icon" type="image/x-icon" href="/cssandjs/logo.ico" th:href="@{/cssandjs/logo.ico}">
-    <link rel="stylesheet" media="all" href="../static/cssandjs/main.css" th:href="@{/cssandjs/main.css}">
     <script defer src="../static/cssandjs/actions.js" th:src="@{/cssandjs/actions.js}"></script>
+    <link rel="stylesheet" media="all" href="../static/cssandjs/main.css" th:href="@{/cssandjs/main.css}">
 </head>
 
 <body>
+
+
 <header id="pagetop" class=" header">
     <a class="left buttons-header" href="/projects">Projects</a>
     <a class="left buttons-header" href="/about">About</a>
     <a class="right buttons-header" href="/contactMe">Contact Me</a>
-    <a class="right buttons-header" href="/Download">CV</a>
+    <a class="right buttons-header" href="/download">CV</a>
     <h1 class="h1-title ">
         Karol Białas</h1>
 
 </header>
+
+
 <hr class="line-1">
-<section class="section-1">
-    <div  class="section-1">
+
+
+<section class="section-1 ">
+    <div class="section-1 hidden show">
         <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
         <p>Karol Białas</p>
 
@@ -43,9 +49,157 @@
         </tr>
     </div>
 </section>
+
+
+<section class="section-2 ">
+    <div class="section-2 hidden show">
+        <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
+        <p>Karol Białas</p>
+
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+    </div>
+</section>
+
+
+<section class="section-3 ">
+    <div class="section-3 hidden show">
+        <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
+        <p>Karol Białas</p>
+
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+    </div>
+</section>
+
+
+<section class="section-1-cards ">
+    <div class="section-1 hidden show">
+        <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
+        <p>Karol Białas</p>
+
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+    </div>
+</section>
+
+
+<section class="section-4 ">
+    <div class="section-4 hidden show">
+        <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
+        <p>Karol Białas</p>
+
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+        <p th:text="${name}"></p>
+        <tr th:each="car: ${cars}">
+            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+            <br>
+        </tr>
+    </div>
+</section>
+
+
 <footer class="footer">
-    <hr class="line-1">
-    <p class="footer-text">&lt;&lt;&lt;&nbsp;&copy; Karol Białas &gt;&gt;&gt;</p>
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>My projects</h4>
+                <ul>
+                    <li><a href="">Java</a></li>
+                    <li><a href="">Unity</a></li>
+                    <li><a href="">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a target="_blank" href="https://github.com/TheBialy3">Git</a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/karol-bia%C5%82as-047b67273/">Linkedin</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Download</h4>
+                <ul>
+                    <li><a href="">CV</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ContactMe</h4>
+                <div class="contact-me">
+                    <div class="tooltip">
+                        <a onmouseout="outFuncNr()" onclick="copyToClipboardNr()" class="contact-section">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 712 712">
+                                <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                            </svg>
+                            <span class="tooltiptext" id="myTooltipnr">Copy to clipboard</span>&nbsp; 534313071</a>
+                    </div>
+                    <div class="tooltip">
+                        <a onmouseout="outFuncMail()" onclick="copyToClipboardMail()" class="contact-section">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 712 712">
+                                <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                            </svg>
+                            <span class="tooltiptext" id="myTooltipmail">Copy to clipboard</span>&nbsp;
+                            karbialasol@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
+
+
 </body>
+
+
 </html>

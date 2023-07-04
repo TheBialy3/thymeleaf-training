@@ -1,28 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
 :root {
     --text-header-color: whitesmoke;
-    --text-body-color-1: #6d8203;
-    --text-body-color-2: #b2b356;
-    --text-body-color-3: #62acb5;
-    --text-body-color-4: #3b4483;
-    --background-section-1: #333;
-    --background-section-2: #5d5d5d;
-    --background-section-3: #5f6062;
-    --background-section-4: #e1e1e1;
+    --text-body-color-1: #ff2929;
+    --text-body-color-2: #a90000;
+    --text-body-color-3: #da0000;
+    --text-body-color-4: #050505;
+    --background-section-1: #000000;
+    --background-section-2: #333;
+    --background-section-3: #545454;
+    --background-section-4: #982424;
+
 }
 
 html {
-    font-size: 22px;
+    font-size: 50px;
 }
 
 body {
     background: var(--background-section-1);
     color: var(--text-header-color);
     margin: 0;
+    font-family: 'Agdasima', sans-serif;
 }
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--text-header-color);
+    text-decoration: none;
+    font-size: 31px;
+}
+
+.container {
+    max-width: 1370px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 22%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 43px;
+    color: var(--text-header-color);
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: var(--text-body-color-1);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.contact-section {
+    display: grid;
+    align-content: baseline;
+}
+
+.section-1-cards {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: inline;
+    background: var(--text-body-color-1);
+    height: 40px;
+    width: 40px;
+    border-radius: 5%;
+    transition: all 0.3s ease;
+}
+
+.hidden {
+    filter: blur(3px);
+    transform: translateX(-50%);
+    -moz-transition: all 0.3s ease;
+    transition: all 0.7s ease;
+}
+
+.hidden:invalid {
+    filter: blur(0);
+
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.icon {
+    display: inline;
+    background: var(--text-header-color);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul {
+    padding-left: 0;
+}
+
+.footer-col ul li {
+    transition: all 0.3s ease;
+    font-weight: 300;
+    text-transform: capitalize;
+    display: block;
+    margin: 15px 0;
+}
+
+.footer-col ul li:hover {
+    padding-left: 10px;
+
+}
+
+.contact-me {
+    display: grid;
+    align-content: baseline;
+}
+
+.contact-me a {
+    transition: all 0.3s ease;
+    font-weight: 300;
+    text-transform: capitalize;
+    display: flex;
+    margin: 15px 0;
+}
+
+.contact-me a:hover {
+    padding-left: 10px;
+    color: var(--text-body-color-1);
+}
+
+.contact-me a:hover > .icon {
+    background: var(--text-body-color-1);
+}
+
+.footer-col ul li a {
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--text-body-color-1);
+}
+
 
 .h1-title {
     margin-top: 0;
     margin-bottom: 0;
+    color: var(--text-header-color);
 }
 
 .left {
@@ -36,11 +188,44 @@ body {
 }
 
 .section-1 {
-    background: var(--background-section-2);
-    width:auto ;
-    padding: 20px
+    background: var(--background-section-1);
+    color: var(--text-body-color-1);
+    width: auto;
+    padding: 50px;
+    text-align: center;
 }
 
+.section-1-cards {
+    background: var(--background-section-1);
+    color: var(--text-body-color-1);
+    width: auto;
+    padding: 50px;
+
+}
+
+.section-2 {
+    background: var(--background-section-2);
+    color: var(--text-body-color-2);
+    width: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.section-3 {
+    background: var(--background-section-3);
+    color: var(--text-body-color-3);
+    width: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.section-4 {
+    background: var(--background-section-4);
+    color: var(--text-body-color-4);
+    width: auto;
+    padding: 50px;
+    text-align: center;
+}
 
 #page-top {
     position: sticky;
@@ -49,11 +234,12 @@ body {
     padding-right: 16px;
     font-family: 'Source Sans Pro Topnav', sans-serif;
 }
-.line-1{
+
+.line-1 {
     height: 2px;
     width: 100%;
     background: var(--text-header-color);
-    margin-top: 0px;
+    margin: 0px;
 }
 
 .buttons-header {
@@ -64,16 +250,19 @@ body {
     border: none;
     border-radius: 5px;
     background: var(--background-section-2);
-    color: var(--text-body-color-4);
-    transition: background-color 0.3s ease;
+    color: var(--text-header-color);
+    transition: all 0.3s ease;
     text-decoration: none; /* Remove underline from link */
     display: inline-block;
 }
+
 .buttons-header:hover {
-    background-color: var(--background-section-4);
+    background-color: var(--background-section-1);
+    color: var(--text-body-color-1);
 }
 
 .header {
+    background: var(--background-section-1);
     position: relative;
     font-size: 30px;
     width: 100%;
@@ -81,16 +270,42 @@ body {
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    padding: 70px 0;
+    background: var(--background-section-1);
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: var(--background-section-3);
+    color: var(--text-header-color);
     text-align: center;
-    background: var( --background-section-1);
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -50%;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.footer-text {
-    margin-top: 0;
-    margin-bottom: 5px;
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--background-section-3) transparent transparent transparent;
 }
 
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
