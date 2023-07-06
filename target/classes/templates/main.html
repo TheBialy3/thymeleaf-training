@@ -100,25 +100,22 @@
 
 
 <section class="section-1-cards ">
-    <div class="section-1 hidden show">
+    <div class="section-1-cards hidden show">
         <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
-        <p>Karol Białas</p>
+        <div class="deck-of-cards">
+            <div class="cards">
+                <div class="card big-card"></div><div class="card big-card"></div>
+                <div class="card small-card"></div>
+            </div>
 
-        <p th:text="${name}"></p>
-        <tr th:each="car: ${cars}">
-            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-            <br>
-        </tr>
-        <p th:text="${name}"></p>
-        <tr th:each="car: ${cars}">
-            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-            <br>
-        </tr>
-        <p th:text="${name}"></p>
-        <tr th:each="car: ${cars}">
-            <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-            <br>
-        </tr>
+            <div class="cards">
+                <div class="card big-card"></div><div class="card big-card"></div>
+                <div class="card small-card"></div>
+            </div>
+        </div>
+        <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/><img
+            src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/><img
+            src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
     </div>
 </section>
 
@@ -153,9 +150,9 @@
             <div class="footer-col">
                 <h4>My projects</h4>
                 <ul>
-                    <li><a href="">Java</a></li>
-                    <li><a href="">Unity</a></li>
-                    <li><a href="">Portfolio</a></li>
+                    <li><a href="/java">Java</a></li>
+                    <li><a href="/unity">Unity</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
                 </ul>
             </div>
             <div class="footer-col">

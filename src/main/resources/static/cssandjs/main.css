@@ -74,21 +74,6 @@ a {
     align-content: baseline;
 }
 
-.section-1-cards {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-}
-
-.card {
-    display: inline;
-    background: var(--text-body-color-1);
-    height: 40px;
-    width: 40px;
-    border-radius: 5%;
-    transition: all 0.3s ease;
-}
 
 .hidden {
     filter: blur(3px);
@@ -197,10 +182,42 @@ a {
 
 .section-1-cards {
     background: var(--background-section-1);
-    color: var(--text-body-color-1);
-    width: auto;
-    padding: 50px;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    height: 100vmin;
+}
 
+.deck-of-cards {
+    display: grid;
+}
+
+.cards, .card {
+    aspect-ratio: 5/7;
+}
+
+.cards, .big-card {
+    height: 30vmin;
+}
+
+.card {
+    background: RGBA(255, 255, 255, 0.05);;
+    display: inline;
+    border-radius: 1vmin;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+.big-card {
+    height: 30vmin;
+}
+.big-card:nth-child(1) {
+    transform: translateX(-10%);
+}
+
+.small-card {
+    height: 10vmin;
 }
 
 .section-2 {
@@ -273,6 +290,7 @@ a {
     padding: 70px 0;
     background: var(--background-section-1);
 }
+
 .tooltip {
     position: relative;
     display: inline-block;
