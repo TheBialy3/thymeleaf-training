@@ -256,12 +256,21 @@ a {
 }
 
 .background-image-s1 {
-    background-image: url("https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1189&q=80");
+    background-image: url("https://source.unsplash.com/cvBBO4PzWPg");
     position: absolute;
     height: 100vmin;
     width: 100%;
     opacity: 0.1;
-    object-fit: fill;
+    object-fit: contain;
+}
+
+.background-image-s2 {
+    background-image: url("https://source.unsplash.com/KgLtFCgfC28");
+    position: absolute;
+    height: 100vmin;
+    width: 100%;
+    opacity: 0.1;
+    background-size: cover;
 }
 
 .background-colors-black {
@@ -376,6 +385,7 @@ a {
     transition: none;
 }
 
+
 .card {
     background: linear-gradient(3deg, hsl(var(--text-header-color)), hsl(var(--background-section-4)));
     display: inline;
@@ -458,6 +468,34 @@ a {
     margin: 0vmin 4vmin;
 }
 
+.pro-name {
+    position: absolute;
+    transition: transform 0.4s cubic-bezier(0.74, 0.21, 0.37, 1.05);
+}
+
+.pro-name[data-status="after"] {
+    transform: translateX(150%) scale(0);
+}
+
+.pro-name[data-status="before"] {
+    transform: translateX(-50%) scale(0);
+}
+
+.pro-name[data-status="active"] {
+    transition-delay: 0.3s;
+    transform: translateX(0) scale(100%);
+}
+
+.pro-name[data-status="becoming-active-from-before"] {
+    transform: translateX(-50%) scale(0);
+    transition: none;
+}
+
+.pro-name[data-status="becoming-active-from-after"] {
+    transform: translateX(150%) scale(0);
+    transition: none;
+}
+
 .section-2-border {
     background: var(--background-section-2);
     color: var(--text-body-color-2);
@@ -480,8 +518,9 @@ a {
     text-align: center;
 }
 
+
 .section-3 {
-    background: var(--background-section-3);
+
     color: var(--text-body-color-3);
     width: auto;
     padding: 100px;
@@ -518,6 +557,7 @@ a {
 
 .buttons-header {
     padding: 5px 15px;
+    border: var(--text-header-color);
     margin: 0.5em 0.5em;
     border: none;
     border-radius: 5px;
@@ -529,6 +569,7 @@ a {
 }
 
 .buttons-header:hover {
+    padding: 10px 20px;
     background-color: var(--background-section-1);
     color: var(--text-body-color-1);
 }

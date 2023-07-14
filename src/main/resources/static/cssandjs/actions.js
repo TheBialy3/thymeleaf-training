@@ -5,11 +5,16 @@ const groups = document.getElementsByClassName("cards");
 const handleRButton = () => {
     const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
     const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
+        currentGroupName = document.querySelector(`[data-index-name="${activeIndex}"]`),
+        nextGroupName = document.querySelector(`[data-index-name="${nextIndex}"]`),
         nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
     currentGroup.dataset.status = "after";
     nextGroup.dataset.status = "becoming-active-from-before";
+    currentGroupName.dataset.status = "after";
+    nextGroupName.dataset.status = "becoming-active-from-before";
     setTimeout(() => {
         nextGroup.dataset.status = "active";
+        nextGroupName.dataset.status = "active";
         activeIndex = nextIndex;
     });
 }

@@ -113,6 +113,9 @@
         <div class=" hidden show" style="text-align: center">
             <h1>My projects</h1>
             <div class="card-swiper">
+                <h2 class="pro-name" data-index-name="0" data-status="active">Java</h2>
+                <h2 class="pro-name" data-index-name="1" data-status="after">Unity</h2>
+                <h2 class="pro-name" data-index-name="2" data-status="after">Portfolio</h2>
                 <div class="deck-of-cards">
                     <a href="/java" class="cards" data-index="0" data-status="active">
                         <img src="../static/fotos/me.jpg" th:src="@{../fotos/me.jpg}" class="card big-card">
@@ -158,10 +161,6 @@
                     &#x2767
                 </button>
             </div>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
         </div>
     </div>
 
