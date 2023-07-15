@@ -21,11 +21,16 @@ const handleRButton = () => {
 const handleLButton = () => {
     const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : groups.length - 1;
     const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
+        currentGroupName = document.querySelector(`[data-index-name="${activeIndex}"]`),
+        nextGroupName = document.querySelector(`[data-index-name="${nextIndex}"]`),
         nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
     currentGroup.dataset.status = "before";
     nextGroup.dataset.status = "becoming-active-from-after";
+    currentGroupName.dataset.status = "before";
+    nextGroupName.dataset.status = "becoming-active-from-after";
     setTimeout(() => {
         nextGroup.dataset.status = "active";
+        nextGroupName.dataset.status = "active";
         activeIndex = nextIndex;
     });
 }
