@@ -36,15 +36,14 @@ a {
     font-size: 31px;
 }
 
-header span{
+header span {
     color: var(--text-body-color-3);
     font-family: 'Agdasima', sans-serif;
 }
 
-p{
+p {
     padding: 0 18vw;
 }
-
 
 
 .container {
@@ -88,7 +87,7 @@ p{
 #left-slider {
     background-image: url("https://source.unsplash.com/FWoq_ldWlNQ");
     background-size: 100vw;
-    height: 100vh;
+    height: 120vh;
 
     position: absolute;
     object-fit: fill;
@@ -98,7 +97,7 @@ p{
 #right-slider {
     background-image: url("https://source.unsplash.com/By-tZImt0Ms");
     background-size: cover;
-    height: 100vh;
+    height: 120vh;
 
     position: absolute;
     object-fit: fill;
@@ -269,17 +268,18 @@ p{
 .background-image-s1 {
     background-image: url("https://source.unsplash.com/cvBBO4PzWPg");
     position: absolute;
-    height: 100vmin;
-    width: 100%;
+    height: 120vh;
+    width: 100vw;
     opacity: 0.1;
     object-fit: contain;
+    background-size: cover;
 }
 
 .background-image-s2 {
     background-image: url("https://source.unsplash.com/KgLtFCgfC28");
     position: absolute;
-    height: 100vmin;
-    width: 100%;
+    height: 120vh;
+    width: 100vw;
     opacity: 0.1;
     background-size: cover;
 }
@@ -322,7 +322,7 @@ p{
 
 /* htabi=height-to-add-background-image */
 .htabi {
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
 }
 
@@ -336,21 +336,21 @@ p{
 
 .section-1-cards {
     color: var(--text-body-color-1);
-    height: 100vmin;
+    height: 120vh;
     width: auto;
     margin: 0;
     padding: 0;
     display: grid;
-    place-items: center;
+    place-items: initial;
 
 }
 
-.section-1-cards h1{
+.section-1-cards h1 {
     color: var(--text-header-color);
     font-size: 100px;
 }
 
-.section-1-cards span{
+.section-1-cards span {
     color: var(--text-header-color);
     font-size: 60px;
 }
@@ -463,7 +463,7 @@ p{
 .swap-buttons {
     margin: 10vh 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
 }
 
@@ -477,8 +477,8 @@ p{
     border-radius: 20%;
     color: var(--text-header-color);
     background-color: var(--background-section-1);
-    height: 7vmin;
-    width: 7vmin;
+    height: 7vh;
+    width: 7vh;
     cursor: pointer;
     margin: 0vmin 4vmin;
 }
@@ -526,7 +526,7 @@ p{
     text-align: center;
 }
 
-.section-2 span{
+.section-2 span {
     color: var(--text-header-color);
     font-size: 60px;
 }
@@ -552,12 +552,22 @@ p{
     text-align: center;
 }
 
-.section-4 {
+.section-carusel {
     background: var(--background-section-4);
     color: var(--text-body-color-4);
     width: auto;
     padding: 100px;
     text-align: center;
+}
+
+.card-carousel {
+    background: linear-gradient(3deg, hsl(var(--text-header-color)), hsl(var(--background-section-4)));
+    display: inline;
+    border: var(--background-section-3) 2px solid;
+    border-radius: 1vmin;
+    transition: all 0.7s cubic-bezier(0.52, -0.63, 0.38, 0.98);
+    position: absolute;
+    box-shadow: none;
 }
 
 .page-top {

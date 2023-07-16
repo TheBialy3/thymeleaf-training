@@ -48,13 +48,24 @@
 <section class="section-1-border ">
     <div class="section-1 ">
         <div class="hidden show">
-            <h1>Experience</h1>
-            <p>Throughout my professional journey, I have had the opportunity to work on some projects,
-                collaborate in a team of four using the <span>github</span> platform , and solve complex technical
-                challenges.
-                I have contributed to the development of robust web applications,
-                implementing features that enhance user experience and drive business goals.</p>
+            <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
+            <p>Karol Białas</p>
 
+            <p th:text="${name}"></p>
+            <tr th:each="car: ${cars}">
+                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+                <br>
+            </tr>
+            <p th:text="${name}"></p>
+            <tr th:each="car: ${cars}">
+                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+                <br>
+            </tr>
+            <p th:text="${name}"></p>
+            <tr th:each="car: ${cars}">
+                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+                <br>
+            </tr>
         </div>
     </div>
 </section>
@@ -64,6 +75,12 @@
     </div>
     <div class="section-1-cards htabi">
         <div class=" hidden show" style="text-align: center">
+            <h1>Experience</h1>
+            <p>Throughout my professional journey, I have had the opportunity to work on some projects,
+                collaborate in a team of four using the <span>github</span> platform , and solve complex technical
+                challenges.
+                I have contributed to the development of robust web applications,
+                implementing features that enhance user experience and drive business goals.</p>
         </div>
     </div>
 
@@ -99,7 +116,7 @@
     </div>
     <div class="section-1-cards htabi">
         <div class=" hidden show" style="text-align: center">
-            <h1>My projects</h1>
+            <h1 >My projects</h1>
             <div class="card-group-names">
                 <h2 class="pro-name" data-index-name="0" data-status="active">Java</h2>
                 <h2 class="pro-name" data-index-name="1" data-status="after">Portfolio</h2>
@@ -166,25 +183,27 @@
 </section>
 
 
-<section class="section-4-border htabi">
-    <div class="section-carusel htabi">
+<section class="section-4-border ">
+    <div class="section-4 ">
         <div class=" hidden show">
-            <h1>Gallery</h1>
-            <div class="carousel">
-                <div class="card-carousel"><a href="">
-                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
-                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card big-card">
-                    <p class="card-name">nazwa1</p>
-                </a>
-                </div>
-                <div></div>
-            </div>
-            <a href="">
-                <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
-                     th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card big-card">
-            </a>
+            <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
+            <p>Karol Białas</p>
 
-
+            <p th:text="${name}"></p>
+            <tr th:each="car: ${cars}">
+                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+                <br>
+            </tr>
+            <p th:text="${name}"></p>
+            <tr th:each="car: ${cars}">
+                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+                <br>
+            </tr>
+            <p th:text="${name}"></p>
+            <tr th:each="car: ${cars}">
+                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
+                <br>
+            </tr>
         </div>
     </div>
 </section>

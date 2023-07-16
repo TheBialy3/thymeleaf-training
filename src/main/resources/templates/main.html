@@ -184,26 +184,12 @@
 
 
 <section class="section-4-border ">
-    <div class="section-4 ">
+    <div class="section-carusel ">
         <div class=" hidden show">
+            <h1>Galeria</h1>
             <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
-            <p>Karol Białas</p>
 
-            <p th:text="${name}"></p>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
-            <p th:text="${name}"></p>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
-            <p th:text="${name}"></p>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
+
         </div>
     </div>
 </section>
