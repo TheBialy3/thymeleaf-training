@@ -65,4 +65,11 @@ public class CarControllre {
 
         return "projectTemplate/portfolio";
     }
+
+    @GetMapping("/all")
+    public String getAll(Model model) {
+        model.addAttribute("name", "karol");
+
+        return "allSections";
+    }
 }
