@@ -13,13 +13,13 @@
 <body>
 
 
-<header class=" header pagetop">
-    <a class="left buttons-header pagetop" href="/projects">Projects</a>
-    <a class="left buttons-header pagetop" href="/about">About</a>
-    <a class="right buttons-header pagetop" href="/contactMe">Contact Me</a>
-    <a class="right buttons-header pagetop" href="/download">CV</a>
-    <h1 class="h1-title pagetop">Karol Białas</h1>
-    <div class="htabi relat">
+<header class=" header">
+    <a class="left buttons-header" href="/projects">Projects</a>
+    <a class="left buttons-header " href="/about">About</a>
+    <a class="right buttons-header " href="/contactMe">Contact Me</a>
+    <a class="right buttons-header " href="/download">CV</a>
+    <a href="http://localhost:8080/main"><h1 class="h1-title ">Karol Białas</h1></a>
+    <div class=" relat">
         <div id="left-slider" class="side">
             <h2 class="center-title z4 ">My name is Białas&nbsp;&nbsp;&nbsp; I'm &nbsp;<span>programmer</span>&nbsp;
             </h2>
@@ -48,24 +48,13 @@
 <section class="section-1-border ">
     <div class="section-1 ">
         <div class="hidden show">
-            <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
-            <p>Karol Białas</p>
+            <h1>Experience</h1>
+            <p>Throughout my professional journey, I have had the opportunity to work on some projects,
+                collaborate in a team of four using the <span>github</span> platform , and solve complex technical
+                challenges.
+                I have contributed to the development of robust web applications,
+                implementing features that enhance user experience and drive business goals.</p>
 
-            <p th:text="${name}"></p>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
-            <p th:text="${name}"></p>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
-            <p th:text="${name}"></p>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
         </div>
     </div>
 </section>
@@ -75,13 +64,21 @@
     </div>
     <div class="section-1-cards htabi">
         <div class=" hidden show" style="text-align: center">
-            <h1>Experience</h1>
-            <p>Throughout my professional journey, I have had the opportunity to work on some projects,
-                collaborate in a team of four using the <span>github</span> platform , and solve complex technical
-                challenges.
-                I have contributed to the development of robust web applications,
-                implementing features that enhance user experience and drive business goals.</p>
         </div>
+    </div>
+
+</section>
+
+<section class="section-5-border ">
+    <div class="section-5 "/>
+    <div class=" hidden show" style="text-align: center">
+        <h1>Also
+        </h1>
+        <p>Trying to learn how to create <span>Unity</span> game. Project like that will help me understand game
+            engine.
+        </p>
+
+    </div>
     </div>
 
 </section>
@@ -116,7 +113,7 @@
     </div>
     <div class="section-1-cards htabi">
         <div class=" hidden show" style="text-align: center">
-            <h1 >My projects</h1>
+            <h1>My projects</h1>
             <div class="card-group-names">
                 <h2 class="pro-name" data-index-name="0" data-status="active">Java</h2>
                 <h2 class="pro-name" data-index-name="1" data-status="after">Portfolio</h2>
@@ -132,11 +129,11 @@
                         <img src="../static/fotos/projectsFoto/java/java-mapa.png"
                              th:src="@{../fotos/projectsFoto/java/java-mapa.png}" class="card big-card">
                         <img src="../static/fotos/projectsFoto/java/tower1.png"
-                             th:src="@{../fotos/projectsFoto/tower1.png}" class="card  small-card">
+                             th:src="@{../fotos/projectsFoto/java/tower1.png}" class="card  small-card">
                         <img src="../static/fotos/projectsFoto/java/tower2.png"
-                             th:src="@{../fotos/projectsFoto/tower2.png}" class="card  small-card">
+                             th:src="@{../fotos/projectsFoto/java/tower2.png}" class="card  small-card">
                         <img src="../static/fotos/projectsFoto/java/tower3.png"
-                             th:src="@{../fotos/projectsFoto/tower3.png}" class="card small-card">
+                             th:src="@{../fotos/projectsFoto/java/tower3.png}" class="card small-card">
                     </a>
                     <a href="/portfolio" class="cards" data-index="1" data-status="after">
                         <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
@@ -183,30 +180,50 @@
 </section>
 
 
-<section class="section-4-border ">
-    <div class="section-4 ">
-        <div class=" hidden show">
-            <img src="../static/fotos/me.jpg" height="112" width="87" th:src="@{../fotos/me.jpg}"/>
-            <p>Karol Białas</p>
-
-            <p th:text="${name}"></p>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
-            <p th:text="${name}"></p>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
-            <p th:text="${name}"></p>
-            <tr th:each="car: ${cars}">
-                <a th:text="${car.getMark()}"></a>&nbsp;&nbsp;<a th:text="${car.getModel()}"></a>
-                <br>
-            </tr>
-        </div>
-    </div>
-</section>
+<!--<section class="section-4-border htabi">-->
+<!--    <div class="section-carusel htabi">-->
+<!--        <div class=" hidden show">-->
+<!--            <h1>Gallery</h1>-->
+<!--            <div class="carousel">-->
+<!--                <div class="card-carousel">-->
+<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
+<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
+<!--                    <p class="card-name">nazwa1</p>-->
+<!--                </div>-->
+<!--                <div class="card-carousel">-->
+<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
+<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
+<!--                    <p class="card-name">nazwa1</p>-->
+<!--                </div>-->
+<!--                <div class="card-carousel">-->
+<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
+<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
+<!--                    <p class="card-name">nazwa1</p>-->
+<!--                </div>-->
+<!--                <div class="card-carousel">-->
+<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
+<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
+<!--                    <p class="card-name">nazwa1</p>-->
+<!--                </div>-->
+<!--                <div class="card-carousel">-->
+<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
+<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
+<!--                    <p class="card-name">nazwa1</p>-->
+<!--                </div>-->
+<!--                <div class="card-carousel">-->
+<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
+<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
+<!--                    <p class="card-name">nazwa1</p>-->
+<!--                </div>-->
+<!--                <div class="card-carousel">-->
+<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
+<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
+<!--                    <p class="card-name">nazwa1</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 
 <footer class="footer">
@@ -223,8 +240,9 @@
             <div class="footer-col">
                 <h4>Links</h4>
                 <ul>
-                    <li><a target="_blank" href="https://github.com/TheBialy3">Git</a></li>
+                    <li><a href="http://localhost:8080/main">Main</a></li>
                     <li><a target="_blank" href="https://www.linkedin.com/in/karol-bia%C5%82as-047b67273/">Linkedin</a>
+                    <li><a target="_blank" href="https://github.com/TheBialy3">Git</a></li>
                     </li>
                 </ul>
             </div>
