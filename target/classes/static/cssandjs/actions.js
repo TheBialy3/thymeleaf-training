@@ -2,6 +2,16 @@ let activeIndex = 0;
 
 const groups = document.getElementsByClassName("cards");
 // for card swap animation
+
+const view1 = document.querySelector(`[data-index-project="0"]`),
+    view2 = document.querySelector(`[data-index-project="1"]`),
+    view3 = document.querySelector(`[data-index-project="2"]`),
+    view4 = document.querySelector(`[data-index-project="3"]`),
+view5 = document.querySelector(`[data-index-project="4"]`);
+
+
+const butt = document.querySelector(`[data-index-project="5"]`),
+    inbutt = document.querySelector(`[data-index-project="6"]`);
 const handleRButton = () => {
     const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
     const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
@@ -34,6 +44,28 @@ const handleLButton = () => {
         activeIndex = nextIndex;
     });
 }
+
+
+const handleToggleButton = () => {
+    view1.dataset.status = "inactive";
+    view2.dataset.status = "inactive";
+    view3.dataset.status = "inactive";
+    view4.dataset.status = "inactive";
+    view5.dataset.status = "inactive";
+    butt.dataset.status = "active";
+    inbutt.dataset.status = "inactive";
+}
+
+const handleInToggleButton = () => {
+    view1.dataset.status = "active";
+    view2.dataset.status = "active";
+    view3.dataset.status = "active";
+    view4.dataset.status = "active";
+    view5.dataset.status = "active";
+    butt.dataset.status = "inactive";
+    inbutt.dataset.status = "active";
+}
+
 // for header animation
 const left = document.getElementById("left-slider");
 const handleOnMuve = e => {

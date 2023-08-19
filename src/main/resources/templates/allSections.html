@@ -14,11 +14,13 @@
 
 
 <header class=" header">
-    <a class="left buttons-header" href="/projects">Projects</a>
-    <a class="left buttons-header " href="/about">About</a>
-    <a class="right buttons-header " href="/contactMe">Contact Me</a>
-    <a class="right buttons-header " href="/download">CV</a>
-    <a href="http://localhost:8080/main"><h1 class="h1-title ">Karol Białas</h1></a>
+    <a class=" buttons-header" href="/projects">Projects</a>
+    <a class=" buttons-header " href="/about">About</a>
+    <a class=" buttons-header " href="/contactMe">Contact Me</a>
+    <a class=" buttons-header " href="/download">CV</a>
+    <a href="http://localhost:8080/main"><h1 class="h1-title left">Karol Białas</h1></a>
+    <a onmouseout="outFuncNr()" onclick="copyToClipboardNr()"><h1 class="h1-title right">&#9743; 534 313 071</h1></a>
+
     <div class=" relat">
         <div id="left-slider" class="side">
             <h2 class="center-title z4 ">My name is Białas&nbsp;&nbsp;&nbsp; I'm &nbsp;<span>programmer</span>&nbsp;
@@ -30,6 +32,77 @@
     </div>
 </header>
 
+<section class="section-1-cards htabi toggle" data-index-project="0" data-status="active">
+    <div class="background-image-s3 "/>
+    </div>
+    <div class="background-image-s4 toggle" data-index-project="1" data-status="active"/>
+    </div>
+    <div class="section-1-cards htabi toggle" data-index-project="2" data-status="active">
+        <div class=" hidden show toggle" style="text-align: center">
+            <h1>My projects</h1>
+            <div class="card-show-names">
+                <h2 class="pro-name-show" >Java</h2>
+                <h2 class="pro-name-show" >Portfolio</h2>
+                <h2 class="pro-name-show" >Unity</h2>
+            </div>
+            <div class="card-show toggle" data-status="active" data-index-project="3">
+                <div class="card-show-toggle toggle" data-status="active" data-index-project="4">
+                    <a href="/java" class="cards-projects">
+                        <img src="../static/fotos/projectsFoto/java/boom.png"
+                             th:src="@{../fotos/projectsFoto/java/boom.png}" class="card-toggle big-card">
+                        <img src="../static/fotos/projectsFoto/java/mines.png"
+                             th:src="@{../fotos/projectsFoto/java/mines.png}" class="card-toggle big-card">
+                        <img src="../static/fotos/projectsFoto/java/java-mapa.png"
+                             th:src="@{../fotos/projectsFoto/java/java-mapa.png}" class="card-toggle big-card">
+                        <img src="../static/fotos/projectsFoto/java/tower1.png"
+                             th:src="@{../fotos/projectsFoto/java/tower1.png}" class="card-toggle  small-card">
+                        <img src="../static/fotos/projectsFoto/java/tower2.png"
+                             th:src="@{../fotos/projectsFoto/java/tower2.png}" class="card-toggle  small-card">
+                        <img src="../static/fotos/projectsFoto/java/tower3.png"
+                             th:src="@{../fotos/projectsFoto/java/tower3.png}" class="card-toggle small-card">
+                    </a>
+                    <a href="/portfolio" class="cards-projects">
+                        <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-toggle big-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/header-2.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/header-2.jpg}" class="card-toggle big-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/footer.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/footer.jpg}" class="card-toggle big-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/html.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/html.jpg}" class="card-toggle  small-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/logo.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/logo.jpg}" class="card-toggle  small-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/css.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/css.jpg}" class="card-toggle small-card">
+                    </a>
+                    <a href="/unity" class="cards-projects">
+                        <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-toggle big-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/header-2.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/header-2.jpg}" class="card-toggle big-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/footer.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/footer.jpg}" class="card-toggle big-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/html.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/html.jpg}" class="card-toggle  small-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/logo.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/logo.jpg}" class="card-toggle  small-card">
+                        <img src="../static/fotos/projectsFoto/portfolio/css.jpg"
+                             th:src="@{../fotos/projectsFoto/portfolio/css.jpg}" class="card-toggle small-card">
+                    </a>
+                </div>
+            </div>
+            <div class="toggle-buttons">
+                <button id="button-_-toggle" onclick="handleInToggleButton()" data-index-project="5" data-status="inactive">
+                    &#x21C5;
+                </button>
+                <button id="button-|-toggle" onclick="handleToggleButton()" data-index-project="6" data-status="active">
+                    &#x21C4;
+                </button>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 <section class="section-2-border ">
     <div class="section-2">
@@ -43,7 +116,6 @@
         </div>
     </div>
 </section>
-
 
 <section class="section-1-border ">
     <div class="section-1 ">
@@ -179,52 +251,50 @@
 
 </section>
 
-
-<!--<section class="section-4-border htabi">-->
-<!--    <div class="section-carusel htabi">-->
-<!--        <div class=" hidden show">-->
-<!--            <h1>Gallery</h1>-->
-<!--            <div class="carousel">-->
-<!--                <div class="card-carousel">-->
-<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
-<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
-<!--                    <p class="card-name">nazwa1</p>-->
-<!--                </div>-->
-<!--                <div class="card-carousel">-->
-<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
-<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
-<!--                    <p class="card-name">nazwa1</p>-->
-<!--                </div>-->
-<!--                <div class="card-carousel">-->
-<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
-<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
-<!--                    <p class="card-name">nazwa1</p>-->
-<!--                </div>-->
-<!--                <div class="card-carousel">-->
-<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
-<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
-<!--                    <p class="card-name">nazwa1</p>-->
-<!--                </div>-->
-<!--                <div class="card-carousel">-->
-<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
-<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
-<!--                    <p class="card-name">nazwa1</p>-->
-<!--                </div>-->
-<!--                <div class="card-carousel">-->
-<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
-<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
-<!--                    <p class="card-name">nazwa1</p>-->
-<!--                </div>-->
-<!--                <div class="card-carousel">-->
-<!--                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"-->
-<!--                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">-->
-<!--                    <p class="card-name">nazwa1</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
+<section class="section-4-border " style="height: 200vh">
+    <div class="section-carusel ">
+        <div class=" hidden show">
+            <h1>Gallery</h1>
+            <div class="carousel">
+                <div class="card-carousel">
+                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
+                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">
+                    <p class="card-name">nazwa1</p>
+                </div>
+                <div class="card-carousel">
+                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
+                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">
+                    <p class="card-name">nazwa1</p>
+                </div>
+                <div class="card-carousel">
+                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
+                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">
+                    <p class="card-name">nazwa1</p>
+                </div>
+                <div class="card-carousel">
+                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
+                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">
+                    <p class="card-name">nazwa1</p>
+                </div>
+                <div class="card-carousel">
+                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
+                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">
+                    <p class="card-name">nazwa1</p>
+                </div>
+                <div class="card-carousel">
+                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
+                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">
+                    <p class="card-name">nazwa1</p>
+                </div>
+                <div class="card-carousel">
+                    <img src="../static/fotos/projectsFoto/portfolio/header.jpg"
+                         th:src="@{../fotos/projectsFoto/portfolio/header.jpg}" class="card-carousel-img">
+                    <p class="card-name">nazwa1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <footer class="footer">
     <div class="container">
@@ -240,6 +310,7 @@
             <div class="footer-col">
                 <h4>Links</h4>
                 <ul>
+                    //chwilowe
                     <li><a href="http://localhost:8080/main">Main</a></li>
                     <li><a target="_blank" href="https://www.linkedin.com/in/karol-bia%C5%82as-047b67273/">Linkedin</a>
                     <li><a target="_blank" href="https://github.com/TheBialy3">Git</a></li>
