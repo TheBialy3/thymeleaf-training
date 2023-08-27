@@ -3,7 +3,7 @@
 
 
 :root {
-    --text-header-color: #F5F5F5FF;
+    --text-header-color: whitesmoke;
     --text-body-color-1: #ff2929;
     --text-body-color-2: #a90000;
     --text-body-color-3: #da0000;
@@ -572,18 +572,11 @@ p {
 }
 
 .cards-projects {
-    position: sticky;
+    position: static;
     height: 30vmin;
     transition: transform 0.4s cubic-bezier(0.74, 0.21, 0.37, 1.05);
 
 }
-
-/*.cards-projects {*/
-/*    position: static;*/
-/*    height: 30vmin;*/
-/*    transition: transform 0.4s cubic-bezier(0.74, 0.21, 0.37, 1.05);*/
-
-/*}*/
 
 .background-image-s4[data-status="active"] {
     height: var( --size-h0);
@@ -607,11 +600,12 @@ p {
 }
 
 .card-show-toggle[data-status="active"] {
-position: absolute;    transition: all 0.7s cubic-bezier(0.52, -0.63, 0.38, 0.98);
+    transform: translateX(-50%) scale(1);
+    transition: all 0.7s cubic-bezier(0.52, -0.63, 0.38, 0.98);
 }
 
 .card-show-toggle[data-status="inactive"] {
-    position: fixed;
+    transform: translateX(-50%) scale(1);
     transition: all 0.7s cubic-bezier(0.52, -0.63, 0.38, 0.98);
 }
 
